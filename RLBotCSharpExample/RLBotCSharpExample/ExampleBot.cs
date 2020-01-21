@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using RLBotDotNet;
 using rlbot.flat;
 
@@ -32,13 +32,13 @@ namespace RLBotCSharpExample
             if (botFrontToTargetAngle > Math.PI)
                 botFrontToTargetAngle -= 2 * Math.PI;
 
-            // Decide which way to steer in order to get to the ball.
+            //+1 is left steer and -1 is right steer
             if (botFrontToTargetAngle > 0)
                 controller.Steer = 1;
             else
                 controller.Steer = -1;
 
-            // Set the throttle to 1 so the bot can move.
+            //Variable throttle control
             controller.Throttle = 1;
 
             return controller;
